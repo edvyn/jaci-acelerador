@@ -10,26 +10,27 @@ body{
 }
 .logo {
     padding-top: 30px;
-    width: 250px;
+    width: 200px;
 }
 
 .hero {
     width: 100%;
-    height: 100vh;
     background-image: url(media/bg-hero.webp);
     background-size: 100% 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: fit-content;
+    padding-bottom: 50px;
 }
 
-.container {
+.container-hero {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    min-height: fit-content;
 
 }
 
@@ -76,7 +77,7 @@ body{
 
  }
 
- .btn {
+.btn {
     text-decoration: none;
     padding: 15px 30px;
     background-color: #A5B104;
@@ -90,7 +91,7 @@ body{
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(165, 177, 4, 0.5);
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .btn:hover {
@@ -100,7 +101,7 @@ body{
 
 
 .hero strong {
-    background: linear-gradient(45deg, #b36e01, #c3d103);
+    background: linear-gradient(45deg, #e08b00, #d9e901);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -137,13 +138,137 @@ iframe {
         font-size: 1.5rem;
         max-width: 95%;
     }
-    .hero .btn{
+    .btn{
+        text-align: center;
         font-size: 1.3rem;
         padding: 12px 16px;
-        width: 90%;
+        width: 88%;
     }
     .video-container{
-        width: 98%;
+        width: 99%;
         height: 210px;
     }
+    .iframe{
+        height: 350px;
+    }
 }
+
+.metodos{
+    display: flex;
+    justify-content: center;
+    background-image: url(media/bg-metodos.webp);
+    background-size: 100% 100%;
+    width: 100%;
+    min-height: 80vh;
+    color: white;
+}
+
+.container-metodos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    width: 95%;
+}
+
+.container-metodos h2{
+    font-size: 1.7rem;
+    max-width: 500px;
+    background: linear-gradient(45deg, #e08b00, #d9e901);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.container-metodos h1{
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 0;
+
+}
+.container-metodos ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 0;
+}
+
+
+.container-metodos ul li{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    width: 95%;
+}
+.icon-metodos{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #d7e605;
+    margin-right: 10px;
+}
+
+@media screen and (max-width:800px){
+    .metodos{
+        background-image: url(media/Acel-vend-MOB-Por-que-seguir-treinos-aleatorios-na-internet-copiar.webp);
+        background-size: cover;
+        justify-content: flex-end;
+        align-items: end;
+        height: 90vh;
+    }
+}
+
+.image-slider-wrapper{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.image-slider {
+    overflow: hidden; /* Hides images that are out of view */
+}
+
+.slider-container {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.image-set {
+    display: flex;
+    transition: all ease 2s;
+}
+
+.image-set img {
+    width: 300px; /* Fixed width for each image */
+    margin-right: 100px; /* Space between images */
+    object-fit: cover; /* Makes sure images maintain aspect ratio */
+}
+
+/* Keyframes for infinite sliding */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves both image sets together */
+    }
+}
+
+.image-slider .slider-wrapper {
+    animation: slide 90s infinite linear; /* Continuous loop */
+}
+
