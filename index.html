@@ -23,8 +23,13 @@
                 <strong>6 semanas </strong></h1>
             <span class="cta"> <span class="icon">↓</span> &nbsp;&nbsp;Assista esse video para descobrir</span>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/DYl-b6leUjw?si=fLcJxG7Z5mdDroJ5" loading="lazy" sandbox="allow-scripts allow-same-origin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>
+                <!-- Thumbnail da imagem -->
+                <img src="assets/media/Group-10.webp" alt="Clique para assistir ao vídeo" class="thumbnail" onclick="playVideo()">
+                
+                <!-- iframe do vídeo, inicialmente oculto, com carregamento preguiçoso -->
+                <iframe id="video" data-src="https://www.youtube.com/embed/DYl-b6leUjw?si=fLcJxG7Z5mdDroJ5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" loading="lazy"></iframe>
+              </div>
+              
             <a class="btn" href="">Quero transformar meu corpo agora!</a>
         </div>
     </section>
