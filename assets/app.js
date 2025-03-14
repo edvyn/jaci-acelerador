@@ -10,3 +10,17 @@ function playVideo() {
     iframe.src = iframe.getAttribute('data-src');
   }
   
+
+  document.querySelectorAll(".pergunta").forEach(button => {
+    button.addEventListener("click", () => {
+        const item = button.parentElement;
+        item.classList.toggle("ativo");
+
+        // Fecha os outros itens quando um novo é aberto
+        document.querySelectorAll(".item").forEach(outroItem => {
+            if (outroItem !== item) {
+                outroItem.classList.remove("ativo");
+            }
+        });
+    });
+});
