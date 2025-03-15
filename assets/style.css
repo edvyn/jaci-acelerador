@@ -9,6 +9,10 @@ body{
     font-family: 'Sora', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -256,7 +260,7 @@ iframe {
 
 .image-set {
     display: flex;
-    transition: all ease 2s;
+    transition: all ease 1s;
 }
 
 .image-set img {
@@ -276,7 +280,7 @@ iframe {
 }
 
 .image-slider .slider-wrapper {
-    animation: slide 50s infinite linear; /* Continuous loop */
+    animation: slide 16s infinite linear; /* Continuous loop */
 }
 
 
@@ -1120,4 +1124,28 @@ ul li {
         font-size: 1rem;
         padding: 15px;
     }
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
 }
