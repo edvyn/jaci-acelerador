@@ -8,8 +8,7 @@ function playVideo() {
     
     // Adiciona o atributo src ao iframe para carregar o vídeo
     iframe.src = iframe.getAttribute('data-src');
-  }
-  
+}
 
   document.querySelectorAll(".pergunta").forEach(button => {
     button.addEventListener("click", () => {
@@ -24,3 +23,7 @@ function playVideo() {
         });
     });
 });
+
+function loadVideo(element, videoUrl) {
+    element.innerHTML = `<iframe src="${videoUrl}" allowfullscreen></iframe>`;
+}

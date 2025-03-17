@@ -18,19 +18,19 @@ html{
     margin: 0;
 }
 .logo {
-    padding-top: 30px;
-    width: 200px;
+    padding-top: 15px;
+    width: 150px;
 }
 
 .hero {
     width: 100%;
     background-image: url(media/bg-hero.webp);
-    background-size: 100% 100%;
+    background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: fit-content;
-    padding-bottom: 100px;
+    min-height: 85vh;
+    padding-bottom: 50px;
 }
 
 .container-hero {
@@ -39,19 +39,19 @@ html{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-height: fit-content;
+    min-height: 70vh;
 
 }
 
 .hero h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     max-width: 850px;
     color: white;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     line-height: 1.2;
 }
 
@@ -99,10 +99,8 @@ html{
     border: none;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
     box-shadow: 0 0 10px rgba(165, 177, 4, 0.5);
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .btn:hover {
@@ -119,9 +117,8 @@ html{
 }
  
 .video-container {
-    position: relative;
-    height: 450px;
-    width: 800px;
+    height: 400px;
+    width: 700px;
 }
   
 .thumbnail {
@@ -136,18 +133,21 @@ iframe {
     border-radius: 10px;
 }
   
+.hero .btn{
+    margin-top: 15px;
+}
 
-
-@media screen and (max-width: 800px) {
-    .hero {
-        background-size: cover;
+@media screen and (max-width: 700px) {
+    .hero{
+        height: 80vh;
     }
     .hero .cta{
         font-size: 1rem;
     }
     .hero h1{
         font-size: 1.5rem;
-        max-width: 95%;
+        max-width: 600px;
+        width: 95%;
     }
     .btn{
         text-align: center;
@@ -161,6 +161,9 @@ iframe {
     }
     .iframe{
         height: 350px;
+    }
+    .logo{
+        margin-top: 20px;
     }
 }
 
@@ -979,7 +982,7 @@ ul li {
 }
 .garantia-left h1{
     font-size: 2.5rem;
-    max-width: 550px;
+    max-width: 500px;
     margin-bottom: 20px;
 }
 .garantia-left p{
@@ -1148,4 +1151,116 @@ ul li {
 
 .whatsapp-button:hover {
     transform: scale(1.1);
+}
+
+
+
+.section-testimonials{
+    width: 100%;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-testimonials h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff9f03, #646b00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    padding-top: 50px;
+
+}
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 20px;
+    padding: 20px;
+}
+.testimonials {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 10px;
+}
+.testimonials h2 {
+    width: 100%;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.testimonial {
+    flex: 1;
+    min-width: 45%;
+    padding: 15px;
+    border-left: 5px solid #95a002;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.testimonial p {
+    font-size: 16px;
+    color: #555;
+}
+.testimonial .author {
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    margin-top: 10px;
+    color: #6b7203;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.video-placeholder:hover {
+    transform: scale(1.05);
+}
+
+
+.video-placeholder img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+.video-placeholder iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+@media (max-width: 1024px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
